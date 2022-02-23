@@ -82,7 +82,7 @@ Observable.of(1, 2, 3)
     }
     .disposed(by: disposeBag)
 
-print("--- create ----")
+print("--- create 1 ----")
 Observable<Int>.create { observer -> Disposable in
     observer.onNext(1)
     observer.onCompleted()
@@ -93,3 +93,51 @@ Observable<Int>.create { observer -> Disposable in
     print("create: \($0)")
 }
 .disposed(by: disposeBag)
+
+print("---- create 2 ----")
+enum MyError: Error {
+    case anError
+}
+
+Observable<Int>.create { observer -> Disposable in
+    observer.onNext(1)
+    observer.onError(MyError.anError)
+    observer.onCompleted()
+    observer.onNext(2)
+    return Disposables.create()
+}
+.subscribe(
+    onNext: {
+        print("onNext: \($0)")
+    },
+    onError: {
+        print("onError: \($0.localizedDescription)")
+    },
+    onCompleted: {
+        print("completed")
+    },
+    onDisposed: {
+        print("disposed")
+    }
+)
+.disposed(by: disposeBag)
+
+print("---- deffered ----")
+var flip: Bool = false
+
+let factory: Observable<String> = Observable.deferred {
+    flip = !flip
+    
+    if flip {
+        return Observable.of("👆")
+    } else {
+        return Observable.of("👇")
+    }
+}
+
+for _ in 0...3 {
+    factory.subscribe(onNext: {
+        print("deffered: \($0)")
+    })
+    .disposed(by: disposeBag)
+}
