@@ -59,3 +59,37 @@ Observable<Void>.never()
     }, onCompleted: {
         print("Never - onCompleted")
     })
+
+print("---- range ----")
+Observable.range(start: 1, count: 9)
+    .subscribe(onNext: {
+        print("range: 2*\($0)=\(2*$0)")
+    })
+
+print("---- dispose ----")
+Observable.of(1, 2, 3)
+    .subscribe {
+        print("dispose: \($0)")
+    }
+    .dispose()
+
+print("---- disposeBag ----")
+let disposeBag = DisposeBag()
+
+Observable.of(1, 2, 3)
+    .subscribe {
+        print("disposeBag: \($0)")
+    }
+    .disposed(by: disposeBag)
+
+print("--- create ----")
+Observable<Int>.create { observer -> Disposable in
+    observer.onNext(1)
+    observer.onCompleted()
+    observer.onNext(2)
+    return Disposables.create()
+}
+.subscribe {
+    print("create: \($0)")
+}
+.disposed(by: disposeBag)
