@@ -94,3 +94,44 @@ decode(json: json2)
         }
     }
     .disposed(by: disposeBag)
+
+print("---- maybe 1 ----") // maybe는 single과 다르게 onSuccess, onError 말고 onCompleted가 더 있다
+Maybe<String>.just("✅")
+    .subscribe(
+        onSuccess: {
+            print("onSuccess: \($0)")
+        },
+        onError: {
+            print("onError: \($0)")
+        },
+        onCompleted: {
+            print("completed")
+        },
+        onDisposed: {
+            print("disposed")
+        }
+    )
+    .disposed(by: disposeBag)
+
+print("---- maybe 2 ----")
+Observable<String>.create { observer -> Disposable in
+    observer.onError(TraitsError.maybe)
+    return Disposables.create()
+}
+.asMaybe()
+.subscribe(
+    onSuccess: {
+        print("onSuccess: \($0)")
+    },
+    onError: {
+        print("onError: \($0)")
+    },
+    onCompleted: {
+        print("completed")
+    },
+    onDisposed: {
+        print("disposed")
+    }
+)
+.disposed(by: disposeBag)
+
