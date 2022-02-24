@@ -40,9 +40,31 @@ publishSubject
     .disposed(by: disposeBag)
 
 publishSubject.onNext("6. 찍힐까요?")
+
 // - BehaviorSubject
 //    - 하나의 초기값을 가진 상태로 시작하여, 새로운 subscriber에게 초기값 또는 최신값을 방출한다
- 
+print("---- behaviorSubject ----")
+enum SubjectError:  Error {
+    case error1
+}
+
+let behaviorSubject = BehaviorSubject<String>(value: "0. 초기값")
+
+behaviorSubject.onNext("1. 첫번째값")
+
+behaviorSubject.subscribe {
+    print("첫번째 구독: \($0.element ?? "첫번째구독 값없음")")
+}
+.disposed(by: disposeBag)
+
+behaviorSubject.onError(SubjectError.error1)
+
+behaviorSubject.subscribe {
+    print("두번째 구독: \($0.element ?? "두번째구독 값없음")")
+}
+.disposed(by: disposeBag)
+
+
 // - ReplaySubject
 //    - 버퍼를 두고 초기화하며, 버퍼 사이즈 만큼의 값들을 유지하면서 새로운 subscriber에게 방출한다
 
