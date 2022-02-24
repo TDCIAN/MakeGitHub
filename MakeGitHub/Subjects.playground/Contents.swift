@@ -53,18 +53,42 @@ let behaviorSubject = BehaviorSubject<String>(value: "0. 초기값")
 behaviorSubject.onNext("1. 첫번째값")
 
 behaviorSubject.subscribe {
-    print("첫번째 구독: \($0.element ?? "첫번째구독 값없음")")
+    print("첫번째 구독:", $0.element ?? $0)
 }
 .disposed(by: disposeBag)
 
 behaviorSubject.onError(SubjectError.error1)
 
 behaviorSubject.subscribe {
-    print("두번째 구독: \($0.element ?? "두번째구독 값없음")")
+    print("두번째 구독:", $0.element ?? $0)
 }
 .disposed(by: disposeBag)
 
 
 // - ReplaySubject
 //    - 버퍼를 두고 초기화하며, 버퍼 사이즈 만큼의 값들을 유지하면서 새로운 subscriber에게 방출한다
+print("---- replaySubject ----")
+let replaySubject = ReplaySubject<String>.create(bufferSize: 2)
 
+replaySubject.onNext("1. 여러분")
+replaySubject.onNext("2. 힘내세요")
+replaySubject.onNext("3. 어렵지만")
+
+replaySubject.subscribe {
+    print("첫번째 구독:", $0.element ?? $0)
+}
+.disposed(by: disposeBag)
+
+replaySubject.subscribe {
+    print("두번째 구독:", $0.element ?? $0)
+}
+.disposed(by: disposeBag)
+
+replaySubject.onNext("4. 할수있어요.")
+replaySubject.onError(SubjectError.error1)
+replaySubject.dispose()
+
+replaySubject.subscribe {
+    print("세번째 구독:", $0.element ?? $0)
+}
+.disposed(by: disposeBag)
