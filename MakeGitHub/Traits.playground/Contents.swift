@@ -135,3 +135,30 @@ Observable<String>.create { observer -> Disposable in
 )
 .disposed(by: disposeBag)
 
+print("---- completable ----")
+Completable.create { observer -> Disposable in
+    observer(.error(TraitsError.completable))
+    return Disposables.create()
+}
+.subscribe(
+    onCompleted: {
+        print("onCompleted")
+    },
+    onError: {
+        print("onError: \($0)")
+    },
+    onDisposed: {
+        print("disposed")
+    }
+)
+.disposed(by: disposeBag)
+
+print("---- completable2 ----")
+Completable.create { observer -> Disposable in
+    observer(.completed)
+    return Disposables.create()
+}
+.subscribe {
+    print("subscribe: \($0)")
+}
+.disposed(by: disposeBag)
