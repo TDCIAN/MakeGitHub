@@ -162,3 +162,4 @@ Completable.create { observer -> Disposable in
     print("subscribe: \($0)")
 }
 .disposed(by: disposeBag)
+

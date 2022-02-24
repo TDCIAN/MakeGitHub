@@ -27,6 +27,7 @@
 		1E4734A227C30A63002EBCBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E71E24C27C447D0004AA042 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1E9CF91027C6FFCB00898828 /* Traits.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Traits.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		1E9CF91127C7117100898828 /* Subjects.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Subjects.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A1BAEE7F9A5DE0CDCB24B95 /* Pods-MakeGitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeGitHub.debug.xcconfig"; path = "Target Support Files/Pods-MakeGitHub/Pods-MakeGitHub.debug.xcconfig"; sourceTree = "<group>"; };
 		72280DDF0E012ACEF6E951BE /* Pods_MakeGitHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MakeGitHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		968E6D717B1C91E5C08B7FF5 /* Pods-MakeGitHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeGitHub.release.xcconfig"; path = "Target Support Files/Pods-MakeGitHub/Pods-MakeGitHub.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 				1E4734A227C30A63002EBCBC /* Info.plist */,
 				1E71E24C27C447D0004AA042 /* MyPlayground.playground */,
 				1E9CF91027C6FFCB00898828 /* Traits.playground */,
+				1E9CF91127C7117100898828 /* Subjects.playground */,
 			);
 			path = MakeGitHub;
 			sourceTree = "<group>";
