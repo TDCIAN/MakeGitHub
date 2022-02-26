@@ -12,6 +12,8 @@
 		1E47349E27C30A63002EBCBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E47349D27C30A63002EBCBC /* Assets.xcassets */; };
 		1E4734A127C30A63002EBCBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E47349F27C30A63002EBCBC /* LaunchScreen.storyboard */; };
 		1EF7DB2427CA048000CCA84F /* RepositoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7DB2327CA048000CCA84F /* RepositoryListViewController.swift */; };
+		1EF7DB2627CA053800CCA84F /* RepositoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7DB2527CA053800CCA84F /* RepositoryListCell.swift */; };
+		1EF7DB2827CA08B700CCA84F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7DB2727CA08B700CCA84F /* Repository.swift */; };
 		2FF557EA1DC7925C77FDD1C8 /* Pods_MakeGitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72280DDF0E012ACEF6E951BE /* Pods_MakeGitHub.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		1E9CF91227C7251800898828 /* FilteringOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FilteringOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1E9CF91327C7355C00898828 /* TransformingOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TransformingOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1EF7DB2327CA048000CCA84F /* RepositoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewController.swift; sourceTree = "<group>"; };
+		1EF7DB2527CA053800CCA84F /* RepositoryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListCell.swift; sourceTree = "<group>"; };
+		1EF7DB2727CA08B700CCA84F /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		3A1BAEE7F9A5DE0CDCB24B95 /* Pods-MakeGitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeGitHub.debug.xcconfig"; path = "Target Support Files/Pods-MakeGitHub/Pods-MakeGitHub.debug.xcconfig"; sourceTree = "<group>"; };
 		72280DDF0E012ACEF6E951BE /* Pods_MakeGitHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MakeGitHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		968E6D717B1C91E5C08B7FF5 /* Pods-MakeGitHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeGitHub.release.xcconfig"; path = "Target Support Files/Pods-MakeGitHub/Pods-MakeGitHub.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 				1E47349427C30A62002EBCBC /* AppDelegate.swift */,
 				1E47349627C30A62002EBCBC /* SceneDelegate.swift */,
 				1EF7DB2327CA048000CCA84F /* RepositoryListViewController.swift */,
+				1EF7DB2527CA053800CCA84F /* RepositoryListCell.swift */,
+				1EF7DB2727CA08B700CCA84F /* Repository.swift */,
 				1E47349D27C30A63002EBCBC /* Assets.xcassets */,
 				1E47349F27C30A63002EBCBC /* LaunchScreen.storyboard */,
 				1E4734A227C30A63002EBCBC /* Info.plist */,
@@ -214,7 +220,9 @@
 			files = (
 				1E47349527C30A62002EBCBC /* AppDelegate.swift in Sources */,
 				1E47349727C30A62002EBCBC /* SceneDelegate.swift in Sources */,
+				1EF7DB2827CA08B700CCA84F /* Repository.swift in Sources */,
 				1EF7DB2427CA048000CCA84F /* RepositoryListViewController.swift in Sources */,
+				1EF7DB2627CA053800CCA84F /* RepositoryListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

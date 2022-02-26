@@ -8,5 +8,6 @@ target 'MakeGitHub' do
   # Pods for MakeGitHub
     pod 'RxSwift', '6.5.0'
     pod 'RxCocoa', '6.5.0'
-
+    pod 'SnapKit', '~> 5.0.0'
+    
 end
