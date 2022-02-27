@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 class RepositoryListCell: UITableViewCell {
+    static let identifier = "RepositoryListCell"
     var repository: Repository?
     
     let nameLabel = UILabel()
@@ -50,7 +51,7 @@ class RepositoryListCell: UITableViewCell {
         
         descriptionLabel.snp.makeConstraints {
             $0.top.equalTo(nameLabel.snp.bottom).offset(3)
-            $0.leading.trailing.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(18)
         }
         
         starImageView.snp.makeConstraints {
