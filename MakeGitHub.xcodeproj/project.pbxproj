@@ -18,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E45BD2427CC4947001E0BC5 /* CombiningOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombiningOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1E47349127C30A62002EBCBC /* MakeGitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeGitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E47349427C30A62002EBCBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E47349627C30A62002EBCBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 				1E9CF91127C7117100898828 /* Subjects.playground */,
 				1E9CF91227C7251800898828 /* FilteringOperators.playground */,
 				1E9CF91327C7355C00898828 /* TransformingOperators.playground */,
+				1E45BD2427CC4947001E0BC5 /* CombiningOperators.playground */,
 			);
 			path = MakeGitHub;
 			sourceTree = "<group>";
